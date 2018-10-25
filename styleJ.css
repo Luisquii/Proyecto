@@ -1,0 +1,46 @@
+header{
+  font-weight: bold;
+  margin: 0px;
+  font-size: 30px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+body{
+  background-image: url('./img/WPHP.jpg');
+  background-color: #000000;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+nav{
+  background-color: rgba(10,10,10,0);
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%;
+}
+
+nav li{
+  display: table-cell;
+}
+
+nav li a{
+  /* color */
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  boder: 1px solid #e0e0d1;
+  padding: 8px 100px;
+}
+
+.Torneo{
+  text-align: center;
+  font-size: 15px;
+  color: #FFFFFF;
+}
