@@ -46,13 +46,37 @@ body {
   letter-spacing: 1px;
   font-size: 48px;
   margin-bottom: -40px;
+  color: #e1e1e1;
 }
-
+.hero a.torneos{
+  font-family: 'Holtwood One SC', serif;
+  text-transform: uppercase;
+  color: #e1e1e1;
+  font-size: 48px;
+}
+.hero article.intro{
+  font-family: 'Holtwood One SC', serif;
+  text-transform: uppercase;
+  color: #e1e1e1;
+  font-size: 24px;
+}
+.hero article.miembros{
+  font-family: 'Holtwood One SC', serif;
+  text-transform: uppercase;
+  color: #e1e1e1;
+  font-size: 18px;
+}
+.hero article.Torneo{
+  font-family: 'Holtwood One SC', serif;
+  text-transform: uppercase;
+  color: #5CCA87;
+  font-size: 18px;
+}
 .hero a.opcions {
   font-family: 'Holtwood One SC', serif;
   font-weight: normal;
   font-size: 30px;
-  vertical-align: middle;
+  text-align: center;
 }
 
 .hero p.year {
@@ -739,3 +763,21 @@ span.banner-header {
 ul {
   list-style: none;
 }
+
+.button {
+   border: 2px solid #20638a;
+   background: #4a9c24;
+   background: -webkit-gradient(linear, left top, left bottom, from(#65d6bc), to(#4a9c24));
+   background: -webkit-linear-gradient(top, #65D6BC, #4A9C24);
+   background: -moz-linear-gradient(top, #65d6bc, #4a9c24);
+   background: -ms-linear-gradient(top, #65d6bc, #4a9c24);
+   background: -o-linear-gradient(top, #65d6bc, #4a9c24);
+   padding: 15.5px 31px;
+   -webkit-border-radius: 18px;
+   -moz-border-radius: 18px;
+   border-radius: 18px;
+   color: #1A1FA3;
+   font-size: 15px;
+   text-decoration: none;
+   vertical-align: middle;
+   }
