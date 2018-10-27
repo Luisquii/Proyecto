@@ -1,110 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-
-    <title>Form Storage</title>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="login.css"/>
   </head>
-
   <body class="align">
 
     <div class="grid">
-
-      <form action="" class="form js-form-storage" name="form-1">
+      <h1>Forma de registro</h1>
+      <form action="./Index.html" method="POST" class="form login">
+        <div class="form__field">
+          <label for="nombre"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuario</span></label>
+          <input type="text" name="nombre" class="form__input" placeholder="Nombre" value="" required><br>
+        </div>
+        <div class="form__field">
+            <label for="nombre"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#gamertag"></use></svg><span class="hidden">Usuario</span></label>
+            <input type="text" name="gamertag" class="form__input" required placeholder="Gamertag" value="" required><br>
+        </div>
+        <div class="form__field">
+            <label for="nombre"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#email"></use></svg><span class="hidden">Usuario</span></label>
+            <input type="text" name="correo" class="form__input" required placeholder="Email" value="" required><br>
+        </div>
+        <div class="form__field">
+          <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Contraseña</span></label>
+          <input id="login__password" type="password" required name="password" class="form__input" placeholder="Contraseña" required><br>
+        </div>
+        <div class="form__field">
+          <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Contraseña</span></label>
+          <input type="password" id="confirma"name="confirma" placeholder="Confirma contraseña" class="form__input" value="" required><br>
+        </div>
+        <div class="form__field">
+          <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Contraseña</span></label>      
+          <input type="text" id="equipo" name="equipo"  placeholder="Equipo" class="form__input" value=""><br>
+        </div>
+      <h1 style="color:#606468">VideoJuego</h1>
+      <form action="index.html" method="POST" class="form login"> 
+        <select class="select" name="">
+          <option value="lol">League of Legends</option>
+          <option value="ow">Overwatch</option>
+          <option value="rl">Rocket League</option>
+        </select>
+        <br></br>
 
         <div class="form__field">
-
-          <div class="form__group">
-            <label for="form-text">Text</label>
-            <input type="text" id="form-text" name="form-text">
+            <input type="submit" value="registrar" href="index.html">
           </div>
-
-        </div>
-
-        <div class="form__field">
-
-          <div class="form__group">
-            <label for="form-radio-1">Radio 1</label>
-            <input type="radio" id="form-radio-1" name="form-radio" value="1" checked>
-          </div>
-
-          <div class="form__group">
-            <label for="form-radio-2">Radio 2</label>
-            <input type="radio" id="form-radio-2" name="form-radio" value="2">
-          </div>
-
-          <div class="form__group">
-            <label for="form-radio-3">Radio 3</label>
-            <input type="radio" id="form-radio-3" name="form-radio" value="3">
-          </div>
-
-          <div class="form__group">
-            <label for="form-radio-4">Radio 4</label>
-            <input type="radio" id="form-radio-4" name="form-radio" value="4">
-          </div>
-
-        </div>
-
-        <div class="form__field">
-
-          <div class="form__group">
-            <label for="form-checkbox-1">Checkbox 1</label>
-            <input type="checkbox" id="form-checkbox-1" name="form-checkbox" value="1">
-          </div>
-
-          <div class="form__group">
-            <label for="form-checkbox-2">Checkbox 2</label>
-            <input type="checkbox" id="form-checkbox-2" name="form-checkbox" value="2">
-          </div>
-
-          <div class="form__group">
-            <label for="form-checkbox-3">Checkbox 3</label>
-            <input type="checkbox" id="form-checkbox-3" name="form-checkbox" value="3">
-          </div>
-
-          <div class="form__group">
-            <label for="form-checkbox-4">Checkbox 4</label>
-            <input type="checkbox" id="form-checkbox-4" name="form-checkbox" value="4">
-          </div>
-        </div>
-
-        <div class="form__field">
-
-          <div class="form__group">
-            <label for="form-select">Select</label>
-            <select id="form-select" name="form-select">
-              <option value="option-1">Option 1</option>
-              <option value="option-2">Option 2</option>
-              <option value="option-3">Option 3</option>
-            </select>
-          </div>
-
-        </div>
-
-        <div class="form__field">
-
-          <div class="form__group">
-            <label for="form-textarea">Textarea</label>
-            <textarea id="form-textarea" name="form-textarea"></textarea>
-          </div>
-
-        </div>
-
-        <div class="form__field">
-          <input type="submit" value="Save" class="js-submit">
-        </div>
-
+        <br></br>
       </form>
-
+        
+      </form> 
+        
     </div>
-
-    <script src="assets/js/script.js"></script>
-
   </body>
-
 </html>
