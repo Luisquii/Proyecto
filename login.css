@@ -220,6 +220,9 @@ input[type='submit'] {
   background-color: var(--loginInputHoverBackgroundColor);
 }
 
+.login input[type='date']{
+  background-color: var(--loginInputHoverBackgroundColor);
+}
 .login input[type='submit'] {
   background-color: var(--loginSubmitBackgroundColor);
   color: var(--loginSubmitColor);
