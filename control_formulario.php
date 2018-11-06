@@ -3,7 +3,7 @@
 necesaria para realizar el registro del usuario en el sistema y redirigir al listado
 de usuarios una vez realizada la acción. Para ello deberá hacer uso de la
 funcionalidad del script “modelo_usuarios.php”. */
-require_once "./modelos_usuarios.php";
+require_once './modelos_usuarios.php';
 
 $fecha = date_create();
 
@@ -22,7 +22,7 @@ $product = [
 
 if(saveProduct($product)){
     //Redirigir al listado
-    header('Location: ./modelos_usuario.php');
+    header('Location: ./control_listado.php');
 }
 else{
     echo "Ha habido un error al guardar el producto";
