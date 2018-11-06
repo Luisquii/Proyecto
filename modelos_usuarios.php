@@ -19,13 +19,12 @@ function saveProduct($userData){
 }
 
 function getProducts(){
-
     global $userlistPath;
-
+    //echo $userlistPath;
     //cargar JSON
     $data = loadJson($userlistPath);
     //Devolver la info
-    return $data["Users"];
-    
+    return $data["nombre"];
+
 }
 ?>

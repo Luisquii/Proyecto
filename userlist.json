@@ -1,0 +1,81 @@
+{
+    "nombre": [
+        {
+            "nombre": "perengano",
+            "apellido": "wachinango",
+            "gamertag": "popo",
+            "correo": "fulano@sutano.mx",
+            "password": "kaka",
+            "equipo": "menganos",
+            "cumpleanos": "2018-11-23",
+            "game": "lol",
+            "ID": 1541463093
+        },
+        {
+            "nombre": "a",
+            "apellido": "a",
+            "gamertag": "a",
+            "correo": "a",
+            "password": "a",
+            "equipo": "a",
+            "cumpleanos": "0001-01-01",
+            "game": "lol",
+            "ID": 1541464184
+        },
+        {
+            "nombre": "a",
+            "apellido": "a",
+            "gamertag": "a",
+            "correo": "a",
+            "password": "a",
+            "equipo": "a",
+            "cumpleanos": "1111-11-01",
+            "game": "lol",
+            "ID": 1541464252
+        },
+        {
+            "nombre": "a",
+            "apellido": "a",
+            "gamertag": "a",
+            "correo": "a",
+            "password": "aa",
+            "equipo": "a",
+            "cumpleanos": "1111-11-01",
+            "game": "lol",
+            "ID": 1541464342
+        },
+        {
+            "nombre": "a",
+            "apellido": "a",
+            "gamertag": "a",
+            "correo": "a",
+            "password": "a",
+            "equipo": "a",
+            "cumpleanos": "0001-01-01",
+            "game": "lol",
+            "ID": 1541464857
+        },
+        {
+            "nombre": "Luis Eduardo",
+            "apellido": "Quiroga",
+            "gamertag": "LuisQuii",
+            "correo": "luisquiiroga96@hotmail.com",
+            "password": "saca",
+            "equipo": "carcas",
+            "cumpleanos": "1111-12-11",
+            "game": "lol",
+            "ID": 1541468303
+        },
+        {
+            "nombre": "aron",
+            "apellido": "sari\u00f1ana",
+            "gamertag": "calvito",
+            "correo": "pelon",
+            "password": "aaa",
+            "equipo": "aaa",
+            "cumpleanos": "2018-11-14",
+            "game": "lol",
+            "ID": 1541468619
+        }
+    ]
+}
