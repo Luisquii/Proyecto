@@ -17,7 +17,9 @@ $product = [
     "equipo"        => $_POST["equipo"],
     "cumpleanos"    => $_POST["cumpleanos"],
     "game"          => $_POST["game"],
-    "ID"            => date_timestamp_get($fecha)
+    "ID"            => date_timestamp_get($fecha),
+    "Utype"         => "Tusuario",
+    "descripcion"   => "Tipo de usuario promedio"
 ];
 
 if(saveProduct($product)){
