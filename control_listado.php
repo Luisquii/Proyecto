@@ -41,6 +41,8 @@ require_once "./modelos_usuarios.php";
                 <th>cumpleaños</th>
                 <th>game</th>
                 <th>ID</th>
+                <th>User Type</th>
+                <th>Descripcion</th>
             </tr>
 
             <?php
@@ -58,7 +60,8 @@ require_once "./modelos_usuarios.php";
                     <td><?php echo $product["cumpleanos"]; ?></td>
                     <td><?php echo $product["game"]; ?></td>
                     <td><?php echo $product["ID"]; ?></td>
-
+                    <td><?php echo $product["Utype"];?> </td>
+                    <td><?php echo $product["descripcion"];?> </td>
                 </tr>
             <?php } ?>
 
