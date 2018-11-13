@@ -1,82 +1,28 @@
-{
-    "nombre": [
-        {
-            "nombre": "asd",
-            "apellido": "asd",
-            "gamertag": "asd",
-            "correo": "asd",
-            "password": "asd",
-            "equipo": "asd",
-            "cumpleanos": "11111-11-11",
-            "game": "lol",
-            "ID": 1541989025,
-            "Utype": "Tusuario",
-            "descripcion": "Tipo de usuario promedio"
-        },
-        {
-            "nombre": "asdf",
-            "apellido": "asdf",
-            "gamertag": "asd",
-            "correo": "asdf",
-            "password": "asdf",
-            "equipo": "asdf",
-            "cumpleanos": "1111-11-11",
-            "game": "lol",
-            "ID": 1541989042,
-            "Utype": "Tusuario",
-            "descripcion": "Tipo de usuario promedio"
-        },
-        {
-            "nombre": "aasd",
-            "apellido": "aasd",
-            "gamertag": "asd",
-            "correo": "aasd",
-            "password": "aasd",
-            "equipo": "aasd",
-            "cumpleanos": "32112-03-12",
-            "game": "lol",
-            "ID": 1541989102,
-            "Utype": "Tusuario",
-            "descripcion": "Tipo de usuario promedio"
-        },
-        {
-            "nombre": "hi",
-            "apellido": "hi",
-            "gamertag": "asd",
-            "correo": "huh",
-            "password": "huhu",
-            "equipo": "huhu",
-            "cumpleanos": "231313-03-12",
-            "game": "lol",
-            "ID": 1541989423,
-            "Utype": "Tusuario",
-            "descripcion": "Tipo de usuario promedio"
-        },
-        {
-            "nombre": "jok",
-            "apellido": "joi",
-            "gamertag": "asd",
-            "correo": "kop",
-            "password": "kop",
-            "equipo": "kop",
-            "cumpleanos": "0123-03-12",
-            "game": "lol",
-            "ID": 1541991101,
-            "Utype": "Tusuario",
-            "descripcion": "Tipo de usuario promedio"
-        },
-        {
-            "nombre": "mio",
-            "apellido": "mio",
-            "gamertag": "asd",
-            "correo": "mio",
-            "password": "mio",
-            "equipo": "mio",
-            "cumpleanos": "231237-03-12",
-            "game": "lol",
-            "ID": 1541991134,
-            "Utype": "Tusuario",
-            "descripcion": "Tipo de usuario promedio"
-        }
-    ]
-}
+[
+    {
+        "nombre": "asd",
+        "apellido": "asd",
+        "gamertag": "asd",
+        "correo": "asd",
+        "password": "asd",
+        "equipo": "asd",
+        "cumpleanos": "1212-12-21",
+        "game": "lol",
+        "ID": 1542069235,
+        "Utype": "Tusuario",
+        "descripcion": "Tipo de usuario promedio"
+    },
+    {
+        "nombre": "qwe",
+        "apellido": "qwe",
+        "gamertag": "sdf",
+        "correo": "qwe",
+        "password": "asd",
+        "equipo": "asd",
+        "cumpleanos": "1515-12-12",
+        "game": "lol",
+        "ID": 1542069284,
+        "Utype": "Tusuario",
+        "descripcion": "Tipo de usuario promedio"
+    }
+]
