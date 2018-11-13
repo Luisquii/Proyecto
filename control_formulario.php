@@ -27,7 +27,11 @@ if(saveProduct($product)){
     header('Location: ./control_listado.php');
 }
 else{
-    echo "Ha habido un error al guardar el producto";
+
+    header("Location: ./form-register.html");
+    //Estaria cool que este echo de abajo apareciera, pero ahorita no es
+    //prioridad
+    echo "Ha habido un error: el gamertag ya existe";
 }
 
 ?>

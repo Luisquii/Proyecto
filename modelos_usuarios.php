@@ -10,19 +10,20 @@ function saveProduct($userData){
 
     //Cargar el archivo a memoria
     $data = loadJson($userlistPath);
+    //Hacer append del producto
+
     //CREO QUE AQUI VA LA VALIDACION DEL GAME TAG PERO AUN NO ESTA BIEN
     foreach ($data as $gTag){
-      if($gTag["nombre"]["gamertag"] == $_POST["gamertag"]){
-        header("Location: ./form-register.html");
-        die();
+      if($userData["gamertag"] === $gTag["gamertag"]){
+        return false;
       }
     }
-    //Hacer append del producto
-    $data["nombre"][] = $userData;
+    $data[] = $userData;
     //Guardar la estructura
     $jsonString = json_encode($data,JSON_PRETTY_PRINT);
-
     return saveJson($jsonString, $userlistPath);
+
+
 }
 
 function getProducts(){
@@ -31,7 +32,7 @@ function getProducts(){
     //cargar JSON
     $data = loadJson($userlistPath);
     //Devolver la info
-    return $data["nombre"];
+    return $data;
 
 }
 ?>
