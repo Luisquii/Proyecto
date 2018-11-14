@@ -18,7 +18,7 @@ $product = [
     "cumpleanos"    => $_POST["cumpleanos"],
     "game"          => $_POST["game"],
     "ID"            => date_timestamp_get($fecha),
-    "Utype"         => "Tusuario",
+    "Utype"         => "Usuario",
     "descripcion"   => "Tipo de usuario promedio"
 ];
 
