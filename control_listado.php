@@ -24,7 +24,7 @@ require_once "./modelos_usuarios.php";
       <nav>
           <ul class="hero">
             <li><a href="./Index.html" target="_self" class= "opcions" id="headline">Home</a></li>
-            <li><a href="./login.html" target="_self" class= "opcions" id="headline">Iniciar Sesión</a></li>
+            <li><a href="./login.php" target="_self" class= "opcions" id="headline">Iniciar Sesión</a></li>
             <li><a href="./Perfil.html" target="_self" class= "opcions" id="headline">Perfil</a></li>
           </ul>
         </nav>
