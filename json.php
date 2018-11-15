@@ -1,15 +1,11 @@
 <?php
 
 function loadJson($file){
-
-    $jsonString = file_get_contents($file);
-    if($jsonString){
+  if(file_exists($file)){
+      $jsonString = file_get_contents($file);
       return json_decode($jsonString, true);
-    }
-    //return json_decode($jsonString, true);
-
-    return false;
-
+  }
+  return false;
 }
 
 function saveJson($data, $path){

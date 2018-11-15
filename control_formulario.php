@@ -1,37 +1,65 @@
 <?php
-/* recibirá la petición del formulario y contendrá la lógica
-necesaria para realizar el registro del usuario en el sistema y redirigir al listado
-de usuarios una vez realizada la acción. Para ello deberá hacer uso de la
-funcionalidad del script “modelo_usuarios.php”. */
 require_once './modelos_usuarios.php';
-
+session_start();
 $fecha = date_create();
+//registro o LogIn o LogOut
+$regLiLo = $_GET['opcion'];
 
-//Guardar el producto
-$product = [
-    "nombre"        => $_POST["nombre"],
-    "apellido"      => $_POST["apellido"],
-    "gamertag"      => $_POST["gamertag"],
-    "correo"        => $_POST["correo"],
-    "password"      => $_POST["password"],
-    "equipo"        => $_POST["equipo"],
-    "cumpleanos"    => $_POST["cumpleanos"],
-    "game"          => $_POST["game"],
-    "ID"            => date_timestamp_get($fecha),
-    "Utype"         => "Usuario",
-    "descripcion"   => "Tipo de usuario promedio"
-];
-
-if(saveProduct($product)){
-    //Redirigir al listado
-    header('Location: ./control_listado.php');
+function loginAfterRegister($gatag, $pass){
+  $product=[
+    "gamertag" => $gatag,
+    "password" => $pass,
+  ];
+  $loginStatus = loginStatus($product);
+  if($loginStatus){
+    header('Location: ./Perfil.php');
+  }
 }
-else{
 
-    header("Location: ./form-register.html");
-    //Estaria cool que este echo de abajo apareciera, pero ahorita no es
-    //prioridad
-    echo "Ha habido un error: el gamertag ya existe";
+if($regLiLo == 1){
+  $product=[
+    "gamertag" => $_POST["gamertag"],
+    "password" => $_POST["password"],
+  ];
+  $loginStatus = loginStatus($product);
+  if($loginStatus){
+    header('Location: ./Perfil.php');
+  }else{
+    header('Location; ./Index.html');
+  }
+}
+
+if($regLiLo==2){
+  //Guardar el producto
+  $product = [
+      "nombre"        => $_POST["nombre"],
+      "apellido"      => $_POST["apellido"],
+      "gamertag"      => $_POST["gamertag"],
+      "correo"        => $_POST["correo"],
+      "password"      => $_POST["password"],
+      "equipo"        => $_POST["equipo"],
+      "cumpleanos"    => $_POST["cumpleanos"],
+      "game"          => $_POST["game"],
+      "ID"            => date_timestamp_get($fecha),
+      "Utype"         => "Usuario",
+      "descripcion"   => "Tipo de usuario promedio"
+  ];
+
+  if(saveProduct($product)){
+      //Redirigir al listado
+      loginAfterRegister($_POST["gamertag"], $_POST["password"]);
+      //header('Location: ./Perfil.php');
+  }
+  else{
+      header("Location: ./form-register.html");
+      //echo "Ha habido un error: el gamertag ya existe";
+  }
+
+}
+
+if($regLiLo==3){
+  session_destroy();;
+	header('Location: ./index.html');
 }
 
 ?>

@@ -2,8 +2,8 @@
 
 session_start();
 
-if(isset($_SESSION["started"])){
-    header("Location: ./profile.php");
+if(isset($_SESSION["userSpecs"])){
+    header("Location: ./Perfil.php");
 }
 
 ?>
@@ -22,7 +22,7 @@ if(isset($_SESSION["started"])){
 
         <div class="grid">
 
-          <form action="./control_login.php" method="POST" class="form login">
+          <form action="./control_formulario.php?opcion=1" method="POST" class="form login">
 
             <div class="form__field">
               <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuario</span></label>
@@ -40,7 +40,7 @@ if(isset($_SESSION["started"])){
 
           </form>
 
-          <p class="text--center">¿No estas registrado? <a href="./form-register.html">¡Registrate ahora!</a> <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>
+          <p class="text--center">¿No estas registrado? <a href="./form-register.php">¡Registrate ahora!</a> <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>
 
         </div>
 
