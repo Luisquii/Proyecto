@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if(isset($_SESSION["userSpecs"])){
+    header("Location: ./Perfil.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,7 +20,7 @@
 
     <div class="grid">
       <h1>Forma de registro</h1>
-      <form action="control_formulario.php" method="POST" class="form login">
+      <form action="./control_formulario.php?opcion=2" method="POST" class="form login">
         <div class="form__field">
           <label for="nombre"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuario</span></label>
           <input type="text" name="nombre" class="form__input" placeholder="Nombre" value="" required><br>
@@ -63,6 +72,7 @@
 
         <div class="form__field">
             <input type="submit" value="registrar" href="index.html">
+
           </div>
         <br></br>
       </form>

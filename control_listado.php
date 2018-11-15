@@ -1,5 +1,23 @@
 <?php
 require_once "./modelos_usuarios.php";
+session_start();
+$adminData = $_SESSION["userSpecs"];
+/*if(isset($_SESSION["userSpecs"])){
+    header("Location: ./Perfil.php");
+}
+else{
+  header("Location: ./form-register.php");
+}*/
+
+if(isset($_SESSION["userSpecs"]) && $adminData["Utype"] == "Admin"){
+
+}elseif(isset($_SESSION["userSpecs"])){
+    header("Location: ./Perfil.php");
+}
+else{
+  header("Location: ./form-register.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +48,9 @@ require_once "./modelos_usuarios.php";
         </nav>
 
 <section class="Primero">
+  <p> Bienvenido: <?php echo $adminData["gamertag"] ?> </p>
         <table border="1" align="center">
+
             <tr>
                 <th>Nombre</th>
                 <th>Apellido</th>
