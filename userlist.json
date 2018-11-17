@@ -7,9 +7,8 @@
         "password": "asd",
         "equipo": "asd",
         "cumpleanos": "1212-12-21",
-        "game": "lol",
         "ID": 1542069235,
-        "Utype": "Tusuario",
+        "Utype": "Usuario",
         "descripcion": "Tipo de usuario promedio"
     },
     {
@@ -20,7 +19,6 @@
         "password": "luis",
         "equipo": "luis",
         "cumpleanos": "1996-05-16",
-        "game": "lol",
         "ID": 1542250555,
         "Utype": "Usuario",
         "descripcion": "Tipo de usuario promedio"
@@ -33,7 +31,6 @@
         "password": "quiroga",
         "equipo": "quiroga",
         "cumpleanos": "1996-05-16",
-        "game": "lol",
         "ID": 1542253042,
         "Utype": "Usuario",
         "descripcion": "Tipo de usuario promedio"
@@ -46,7 +43,6 @@
         "password": "prueba",
         "equipo": "prueba",
         "cumpleanos": "1996-05-16",
-        "game": "lol",
         "ID": 1542257342,
         "Utype": "Usuario",
         "descripcion": "Tipo de usuario promedio"
@@ -59,7 +55,6 @@
         "password": "prueba2",
         "equipo": "prueba2",
         "cumpleanos": "0996-05-16",
-        "game": "lol",
         "ID": 1542259138,
         "Utype": "Usuario",
         "descripcion": "Tipo de usuario promedio"
@@ -72,7 +67,6 @@
         "password": "p3",
         "equipo": "p3",
         "cumpleanos": "1996-05-16",
-        "game": "lol",
         "ID": 1542259163,
         "Utype": "Usuario",
         "descripcion": "Tipo de usuario promedio"
@@ -85,7 +79,6 @@
         "password": "p4",
         "equipo": "p4",
         "cumpleanos": "1996-05-16",
-        "game": "lol",
         "ID": 1542259358,
         "Utype": "Usuario",
         "descripcion": "Tipo de usuario promedio"
@@ -115,5 +108,70 @@
         "ID": 1542259472,
         "Utype": "Admin",
         "descripcion": "Tipo de usuario Administrador"
+    },
+    {
+        "nombre": "Josue",
+        "apellido": "vald",
+        "gamertag": " fulanin",
+        "correo": "macareno",
+        "password": "a",
+        "equipo": "a",
+        "cumpleanos": "2018-11-18",
+        "game": "lol",
+        "ID": 1542484225,
+        "Utype": "Usuario",
+        "descripcion": "Tipo de usuario promedio"
+    },
+    {
+        "nombre": "asd",
+        "apellido": "asd",
+        "gamertag": "sdf",
+        "correo": "sdf",
+        "password": "sdf",
+        "equipo": "sdf",
+        "cumpleanos": "2018-11-30",
+        "game": "lol",
+        "ID": 1542484335,
+        "Utype": "Usuario",
+        "descripcion": "Tipo de usuario promedio"
+    },
+    {
+        "nombre": "asd",
+        "apellido": "sdf",
+        "gamertag": "luisquiputo",
+        "correo": "sdf",
+        "password": "sdf",
+        "equipo": "sdf",
+        "cumpleanos": "2018-11-16",
+        "game": "lol",
+        "ID": 1542484431,
+        "Utype": "Usuario",
+        "descripcion": "Tipo de usuario promedio"
+    },
+    {
+        "nombre": "q",
+        "apellido": "q",
+        "gamertag": "qq",
+        "correo": "q",
+        "password": "qq",
+        "equipo": "qq",
+        "cumpleanos": "2019-02-07",
+        "game": "lol",
+        "ID": 1542484594,
+        "Utype": "Usuario",
+        "descripcion": "Tipo de usuario promedio"
+    },
+    {
+        "nombre": "qweqwe",
+        "apellido": "qwe",
+        "gamertag": "qwe",
+        "correo": "qwqe@aosid",
+        "password": "we",
+        "equipo": "qwe",
+        "cumpleanos": "2018-11-08",
+        "game": "lol",
+        "ID": 1542485266,
+        "Utype": "Usuario",
+        "descripcion": "Tipo de usuario promedio"
     }
 ]

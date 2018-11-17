@@ -6,6 +6,8 @@ if(isset($_SESSION["userSpecs"])){
     header("Location: ./Perfil.php");
 }
 
+$hoy=date("Y-m-d");
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -38,7 +40,7 @@ if(isset($_SESSION["userSpecs"])){
 
         <div class="form__field">
             <label for="nombre"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#email"></use></svg><span class="hidden">Usuario</span></label>
-            <input type="text" name="correo" class="form__input" required placeholder="Email" value="" required><br>
+            <input type="email" name="correo" class="form__input" required placeholder="Email" value="" required><br>
         </div>
 
         <div class="form__field">
@@ -46,10 +48,10 @@ if(isset($_SESSION["userSpecs"])){
           <input id="login__password" type="password" required name="password" class="form__input" placeholder="Contraseña" required><br>
         </div>
 
-        <div class="form__field">
+        <!-- <div class="form__field">
           <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Contraseña</span></label>
           <input type="password" id="confirma"name="confirma" placeholder="Confirma contraseña" class="form__input" value="" required><br>
-        </div>
+        </div> -->
 
         <div class="form__field">
           <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Contraseña</span></label>
@@ -58,17 +60,8 @@ if(isset($_SESSION["userSpecs"])){
 
         <div class="form__field">
           <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#birthday"></use></svg><span class="hidden">Contraseña</span></label>
-          <input type="date" name="cumpleanos" class="form__input" required placeholder="Fecha de Nacimiento" value="" required><br>
+          <input type="date" name="cumpleanos" class="form__input" required placeholder="Fecha de Nacimiento" value="" required max=<?php echo $hoy;?>><br>
       </div>
-
-      <h1 style="color:#606468">VideoJuego</h1>
-
-        <select class="select" name="game">
-          <option value="lol">League of Legends</option>
-          <option value="ow">Overwatch</option>
-          <option value="rl">Rocket League</option>
-        </select>
-        <br></br>
 
         <div class="form__field">
             <input type="submit" value="registrar" href="index.html">
