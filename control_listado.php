@@ -43,7 +43,7 @@ else{
           <ul class="hero">
             <li><a href="./Index.html" target="_self" class= "opcions" id="headline">Home</a></li>
             <li><a href="./login.php" target="_self" class= "opcions" id="headline">Iniciar Sesión</a></li>
-            <li><a href="./Perfil.html" target="_self" class= "opcions" id="headline">Perfil</a></li>
+            <li><a href="./Perfil.php" target="_self" class= "opcions" id="headline">Perfil</a></li>
           </ul>
         </nav>
 
@@ -51,7 +51,7 @@ else{
   <p> Bienvenido: <?php echo $adminData["gamertag"] ?> </p>
         <table border="1" align="center">
 
-            <tr>
+            <tr class="hero">
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Gamertag</th>
@@ -59,7 +59,6 @@ else{
                 <th>password</th>
                 <th>equipo</th>
                 <th>cumpleaños</th>
-                <th>game</th>
                 <th>ID</th>
                 <th>User Type</th>
                 <th>Descripcion</th>
@@ -70,18 +69,17 @@ else{
 
             foreach($products as $product){
             ?>
-                <tr>
-                    <td><?php echo $product["nombre"]; ?></td>
-                    <td><?php echo $product["apellido"]; ?></td>
-                    <td><?php echo $product["gamertag"]; ?></td>
-                    <td><?php echo $product["correo"]; ?></td>
-                    <td><?php echo $product["password"]; ?></td>
-                    <td><?php echo $product["equipo"]; ?></td>
-                    <td><?php echo $product["cumpleanos"]; ?></td>
-                    <td><?php echo $product["game"]; ?></td>
-                    <td><?php echo $product["ID"]; ?></td>
-                    <td><?php echo $product["Utype"];?> </td>
-                    <td><?php echo $product["descripcion"];?> </td>
+                <tr class="hero">
+                    <td class="miembros"><?php echo $product["nombre"]; ?></td>
+                    <td class="miembros"><?php echo $product["apellido"]; ?></td>
+                    <td class="miembros"><?php echo $product["gamertag"]; ?></td>
+                    <td class="miembros"><?php echo $product["correo"]; ?></td>
+                    <td class="miembros"><?php echo $product["password"]; ?></td>
+                    <td class="miembros"><?php echo $product["equipo"]; ?></td>
+                    <td class="miembros"><?php echo $product["cumpleanos"]; ?></td>
+                    <td class="miembros"><?php echo $product["ID"]; ?></td>
+                    <td class="miembros"><?php echo $product["Utype"];?> </td>
+                    <td class="miembros"><?php echo $product["descripcion"];?> </td>
                 </tr>
             <?php } ?>
 
