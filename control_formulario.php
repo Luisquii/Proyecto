@@ -60,7 +60,7 @@ if(isset($_GET['opcion'])){
           //header('Location: ./Perfil.php');
       }
       else{
-          header("Location: ./form-register.html");
+          header("Location: ./form-register.php");
           //echo "Ha habido un error: el gamertag ya existe";
       }
 

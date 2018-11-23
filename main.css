@@ -1,6 +1,6 @@
 body {
   font-family: 'Istok Web', sans-serif;
-  background: url("http://picjumbo.com/wp-content/uploads/HNCK2189-1300x866.jpg") no-repeat #000;
+  background: black;
   background-size: cover;
   min-height: 100%;
   margin: 0;
@@ -68,6 +68,12 @@ body {
   text-transform: uppercase;
   color: #e1e1e1;
   font-size: 18px;
+}
+.hero td.miembros{
+  font-family: 'Holtwood One SC', serif;
+  text-transform: uppercase;
+  color: #e1e1e1;
+  font-size: 12px;
 }
 .hero article.Torneo{
   font-family: 'Holtwood One SC', serif;
@@ -784,3 +790,9 @@ ul {
    text-decoration: none;
    vertical-align: middle;
    }
+#sad{
+  height: 100px;
+  width: 150px;
+  margin-left: 46.5%;
+  background-color: #000;
+}

@@ -1,7 +1,7 @@
-<!-- Perfil de usuario -->
+
+<!-- Perfil de equipo -->
 <?php
   session_start();
-  require_once "./modelo_torneos.php";
   require_once "./modelos_usuarios.php";
   if(isset($_SESSION["userSpecs"])){
     //dejar vacio...
@@ -12,11 +12,13 @@
   $userData = $_SESSION["userSpecs"];
 ?>
 
+
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
-    <title> Perfil </title>
+    <title> Equipo </title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="./main.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -30,48 +32,48 @@
 
   <header class="hero">
     <div class="hero-wrap">
-      <p class="intro" id="intro">Perfil</p>
+      <p class="intro" id="intro">Equipo</p>
    </header>
 
    <nav>
       <ul class="hero">
         <li><a href="./Index.html" target="_self" class= "opcions" id="headline">Home</a></li>
-        <!-- <li><a href="./login.html" target="_self" class= "opcions" id="headline">Iniciar Sesión</a></li> -->
-        <li><a href="./Lol.php" target="_self" class= "opcions" id="headline">LoL</a></li>
-        <li><a href="./Ow.php" target="_self" class= "opcions" id="headline">OW</a></li>
-        <li><a href="./Rl.php" target="_self" class= "opcions" id="headline">RL</a></li>
+        <li><a href="./login.php" target="_self" class= "opcions" id="headline">Iniciar Sesión</a></li>
         <li><a href="./Perfil.php" target="_self" class= "opcions" id="headline">Perfil</a></li>
       </ul>
     </nav>
 </br></br>
 
  <section class="hero">
-    <!-- Imagen de Perfil -->
+    <!-- Imagen de Perfil --><?php $equipo = $_GET["team"]; ?>
+    <p class="intro" > <?php echo $equipo;  ?></p> <br>
+    <article style="margin-top:3%"> <img src="./img/<?php echo $equipo;  ?>.png" alt="imagen del equipo" height="150" width="150"/> </article> <br>
 
-    <form action="./control_formulario.php?opcion=3" method="POST" class="form login">
-      <div class="form__field">
-        <input type="submit" class="button" name="logout" value="Cerrar Sesion">
-      </div>
-    </form>
-    <article class="lema"> Nombre de usuario: <?php echo $userData["gamertag"] ?> </article>
-    <br> <br>
-    <img src="./img/IconP.png" alt="Prl" height="80" width="80" />
-    <br> <br>
-    <article class= "lema"> Miembro en: <?php echo $userData["equipo"] ?> </article>
-    <br> <br>
-    <a class= "hero"> Estadisticas Genericas de videojuegos </a>
+    <article class="miembros"> Miembros
+      <br>
+      <?php
+      $products = getProducts();
 
+      foreach($products as $product){
+        if($product["equipo"] == $equipo ){
+          ?>
 
+          <a class= "opcions" ><?php echo $product["gamertag"] ;  ?></a>
+          <br>
 
+          <?php }
 
+      }?>
+    </article>
   </section>
-<br><br>
+</br></br>
 
-<section class="Info">
-  <p> Torneos Inscritos </p>
-  <article>
-    ITESM QRO <br>
-    DAW <br>
+<section class="hero">
+  <article class="Torneo">
+    Torneos inscritos:</article> </br>
+    <!-- aqui va un for each, pero no puedo llamar los dos phps de modelos_usuarios y modelo_torneos porque las dos usar saveproducts() porfa arreglen eso  -->
+    <article class="Torneo"><a href="./Brakets.php">Uleague - 2018 </a></article>  </br>
+    <article class="Torneo"><a href="./Brakets.php">QROleague - 2018 </a></article> </br>
   </article>
 
 

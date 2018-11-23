@@ -30,10 +30,12 @@ function getProducts(){
     global $userlistPath;
     //cargar JSON
     $data = loadJson($userlistPath);
+
     //Devolver la info
     return $data;
 
 }
+
 
 function getUserType($userData){
     global $userlistPath;
