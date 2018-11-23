@@ -30,7 +30,7 @@
  <body>
     <header class="hero">
         <div class="hero-wrap">
-          <p class="intro" id="intro">Rocket League</p>
+          <b class="intro" >Rocket League</b>
     </header>
 
     <nav>
@@ -40,17 +40,17 @@
           <li><a href="./Perfil.php" target="_self" class= "opcions" id="headline">Perfil</a></li>
           <li><a href="./Equipos.php" target="_self" class= "opcions" id="headline">Equipos</a></li>
         </ul>
-      </nav>
- </br></br>
- <?php
- session_start();
- $jsondata= file_get_contents("torneos.json");
- $torneos= json_decode($jsondata,true);
- $output= "<ul>";
- foreach ($torneos as $torneo) {
-   if ($torneo['juego']=="rl") {
-     ?>
-     <a href='TorneoInfo.php?id=<?php echo $torneo['id'] ?>' target='_self' class='banner'>
+    </nav>
+
+<?php
+session_start();
+$jsondata = file_get_contents("torneos.json");
+$torneos = json_decode($jsondata, true);
+$output = "<ul>";
+foreach ($torneos as $torneo) {
+    if ($torneo['juego'] == "rl") {
+?>
+     <a href='TorneoInfo.php?id=<?php echo $torneo['id'] ?>' target='_self' class='banner' style="margin-top:5%">
              <div class='banner-fill banner-image'></div>
              <div class='banner-fill banner-content-container'>
                <div class='banner-content'>
@@ -59,23 +59,20 @@
                </div>
              </div>
            </a>
-         </br>
      <?php
+    } 
+    else {
+        continue;
     }
-    else{
-      continue;
-    }
-   }
- ?>
-</br></br>
- <section class="Segundo">
+}
+?>
+
+ <section class="Segundo" style="margin-top:5%">
    <a href="register_tourney.php" class='button'>Crear torneo</a>
  </section>
+ 
  <footer class="piepag" >
    <p>Copyright &copy; DAW 2018</p>
-   Luis Quiroga A00513223 - Josué Valdivia A00398731 - Luis Garcia A01350241<br/>
-   Laboratorio 8 - DAW<br/>
-   Erik de Jesús Sánchez
  </footer>
  </body>
 

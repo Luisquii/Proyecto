@@ -112,7 +112,7 @@
     {
         "nombre": "Josue",
         "apellido": "vald",
-        "gamertag": " fulanin",
+        "gamertag": "fulanin",
         "correo": "macareno",
         "password": "a",
         "equipo": "a",
@@ -171,6 +171,30 @@
         "cumpleanos": "2018-11-08",
         "game": "lol",
         "ID": 1542485266,
+        "Utype": "Usuario",
+        "descripcion": "Tipo de usuario promedio"
+    },
+    {
+        "nombre": "baduel",
+        "apellido": "troche",
+        "gamertag": "badum",
+        "correo": "badu@hotmail.com",
+        "password": "badum",
+        "equipo": "los baduels",
+        "cumpleanos": "1996-05-16",
+        "ID": 1543001120,
+        "Utype": "Usuario",
+        "descripcion": "Tipo de usuario promedio"
+    },
+    {
+        "nombre": "ppp",
+        "apellido": "ppp",
+        "gamertag": "ppp",
+        "correo": "ppp@hotmail.com",
+        "password": "ppp",
+        "equipo": "luis",
+        "cumpleanos": "1996-05-16",
+        "ID": 1543001230,
         "Utype": "Usuario",
         "descripcion": "Tipo de usuario promedio"
     }

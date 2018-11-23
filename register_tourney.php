@@ -44,15 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <h1>Registro de torneo</h1>
       <form  method="POST" class="form login" id="tourneyForm">
         <div class="form__field">
-          <label for="lugar"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Lugar</span></label>
+          <label for="lugar"><svg class="icon"></svg><span class="hidden">Lugar</span></label>
           <input type="text" name="lugar" class="form__input" placeholder="lugar" value="" required><br>
         </div>
         <div class="form__field">
-          <label for="nombre"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Nombre</span></label>
+          <label for="nombre"><svg class="icon"></svg><span class="hidden">Nombre</span></label>
           <input type="text" name="nombre" class="form__input" placeholder="nombre" value="" required><br>
         </div>
         <div class="form__field">
-          <label for="juego"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden"></span>Juego</label>
+          <label for="juego"><svg class="icon"></svg><span class="hidden"></span>Juego</label>
           <select class="form_input" name="juego">
             <option value="lol">League of legends</option>
             <option value="ow">Overwatch</option>
@@ -61,23 +61,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <h4>Ronda 1</h4>
         <div class="form__field">
-          <label for="Ronda1"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#birthday"></use></svg><span class="hidden"></span></label>
-          <input type="date" name="Ronda1" class="form__input" required placeholder="Ronda 1" value=""?><br>
+          <label for="Ronda1"><svg class="icon"></svg><span class="hidden"></span></label>
+          <input type="date" name="Ronda1" class="form__input" required placeholder="Ronda 1" value=""><br>
         </div>
         <h4>Ronda 2</h4>
         <div class="form__field">
-          <label for="Ronda2"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#birthday"></use></svg><span class="hidden"></span></label>
-          <input type="date" name="Ronda2" class="form__input" required placeholder="Ronda 2" value=""?><br>
+          <label for="Ronda2"><svg class="icon"></svg><span class="hidden"></span></label>
+          <input type="date" name="Ronda2" class="form__input" required placeholder="Ronda 2" value=""><br>
         </div>
           <h4>Semifinal</h4>
         <div class="form__field">
-          <label for="Semifinal"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#birthday"></use></svg><span class="hidden"></span></label>
-          <input type="date" name="Semifinal" class="form__input" required placeholder="Ronda 3" value=""?><br>
+          <label for="Semifinal"><svg class="icon"></svg><span class="hidden"></span></label>
+          <input type="date" name="Semifinal" class="form__input" required placeholder="Ronda 3" value=""><br>
         </div>
         <h4>Final</h4>
         <div class="form__field">
-          <label for="Final"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#birthday"></use></svg><span class="hidden"></span></label>
-          <input type="date" name="Final" class="form__input" required placeholder="Ronda 3" value=""?><br>
+          <label for="Final"><svg class="icon"></svg><span class="hidden"></span></label>
+          <input type="date" name="Final" class="form__input" required placeholder="Ronda 3" value=""><br>
         </div>
         <textarea rows="4" cols="50" name="desc" form="tourneyForm">
         Descripción del torneo</textarea>
@@ -85,8 +85,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="form__field">
             <input type="submit" value="registrar" href="Index.html">
         </div>
-        <br></br>
+        <br><br>
       </form>
     </div>
+    <footer class="piepag" >
+      <p>Copyright &copy; DAW 2018 - Kitty Kats</p>
+    </footer>
   </body>
 </html>
