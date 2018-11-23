@@ -16,7 +16,7 @@
 <body>
     <header class="hero">
         <div class="hero-wrap">
-          <p class="intro" id="intro">Brackcito</p>
+          <b class="intro" id="intro">Brackcito</b>
        </header>
 
        <nav>
@@ -26,36 +26,38 @@
             <li><a href="./Perfil.html" target="_self" class= "opcions" id="headline">Perfil</a></li>
           </ul>
         </nav>
-</br></br>
+
 <?php
 session_start();
-$team= "equipo 1";//$_SESSION['equipo'];
-$jsondata= file_get_contents("torneos.json");
-$torneos= json_decode($jsondata,true);
-$output="<ul>";
+$team = "equipo 1"; //$_SESSION['equipo'];
+$jsondata = file_get_contents("torneos.json");
+$torneos = json_decode($jsondata, true);
+$output = "<ul>";
 $userData = $_SESSION["userSpecs"];
-$equipo= $userData["equipo"];
-$id=$_GET['id'];
+$equipo = $userData["equipo"];
+$id = $_GET['id'];
 foreach ($torneos as $torneo) {
-  if($torneo['id']==$id){
-    ?>
+    if ($torneo['id'] == $id) {
+?>
       <section class="hero">
-        <p>Torneo: <?php echo $torneo['nombre'];?></p>
-        <p>Lugar <?php echo $torneo['lugar'];?></p>
-        <p>Ronda 1: <?php echo $torneo['ronda1'];?></p>
-        <p>Ronda 2: <?php echo $torneo['ronda2'];?></p>
-        <p>Semifinal: <?php echo $torneo['semifinal'];?></p>
-        <p>Final: <?php echo $torneo['final'];?></p>
-        <p>Reglas: <?php echo $torneo['descripcion'];?></p>
+        <p>Torneo: <?php echo $torneo['nombre']; ?></p>
+        <p>Lugar <?php echo $torneo['lugar']; ?></p>
+        <p>Ronda 1: <?php echo $torneo['ronda1']; ?></p>
+        <p>Ronda 2: <?php echo $torneo['ronda2']; ?></p>
+        <p>Semifinal: <?php echo $torneo['semifinal']; ?></p>
+        <p>Final: <?php echo $torneo['final']; ?></p>
+        <p>Reglas: <?php echo $torneo['descripcion']; ?></p>
       </section>
     <?php
-   }
-   else{
-     continue;
-   }
-  }
+    }
+
+    else {
+        continue;
+    }
+}
 ?>
-<section class="Segundo">
+
+<section class="Segundo" style="margin-top:5%;margin-bottom:5%">
  <a href='#' class='button' onclick="inscribir();">Inscribir Torneo</a>
  <!--Aqui falta que al hacer click el $id se pase por la Url a la página de Brakets.php-->
  <a href='Brakets.php?id=<?php echo $id; ?>' class='button'>Brackets</a>
@@ -64,7 +66,7 @@ foreach ($torneos as $torneo) {
 <script type="text/javascript">
 function inscribir(){
   //Insertar la función de AJAX aquí.
-  $.post( "modelo_torneos.php",{idTorneo:<?php echo $id ?>,team:"<?php echo $equipo  ?>",action:"storeTeam"},function(data){
+  $.post( "modelo_torneos.php",{idTorneo:<?php echo $id ?>,team:"<?php echo $equipo ?>",action:"storeTeam"},function(data){
   },"json");
   if("json"){
     alert("Equipo inscrito");
@@ -73,10 +75,7 @@ function inscribir(){
 </script>
 
 <footer class="piepag" >
-  <p>Copyright &copy; DAW 2018</p>
-  Luis Quiroga A00513223 - Josué Valdivia A00398731 - Luis Garcia A01350241<br/>
-  Laboratorio 8 - DAW<br/>
-  Erik de Jesús Sánchez
+  <p>Copyright &copy; DAW 2018 - Kitty Kats</p>
 </footer>
 </body>
 

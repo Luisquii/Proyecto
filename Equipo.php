@@ -1,15 +1,15 @@
 
 <!-- Perfil de equipo -->
 <?php
-  session_start();
-  require_once "./modelos_usuarios.php";
-  if(isset($_SESSION["userSpecs"])){
+session_start();
+require_once "./modelos_usuarios.php";
+if (isset($_SESSION["userSpecs"])) {
     //dejar vacio...
-  }else{
-    header("Location: ./login.php");
-  }
 
-  $userData = $_SESSION["userSpecs"];
+} else {
+    header("Location: ./login.php");
+}
+$userData = $_SESSION["userSpecs"];
 ?>
 
 
@@ -32,7 +32,7 @@
 
   <header class="hero">
     <div class="hero-wrap">
-      <p class="intro" id="intro">Equipo</p>
+      <b class="intro" id="intro">Equipo</b>
    </header>
 
    <nav>
@@ -42,44 +42,52 @@
         <li><a href="./Perfil.php" target="_self" class= "opcions" id="headline">Perfil</a></li>
       </ul>
     </nav>
-</br></br>
 
  <section class="hero">
-    <!-- Imagen de Perfil --><?php $equipo = $_GET["team"]; ?>
-    <p class="intro" > <?php echo $equipo;  ?></p> <br>
-    <article style="margin-top:3%"> <img src="./img/<?php echo $equipo;  ?>.png" alt="imagen del equipo" height="150" width="150"/> </article> <br>
+    <!-- Imagen de Perfil -->
+    <?php $equipo = $_GET["team"]; ?>
+    <p class="intro" > <?php echo $equipo; ?></p> <br>
+    <article style="margin-top:3%"> <img src="./img/<?php echo $equipo; ?>.jpg" alt="imagen del equipo" height="150" width="150"/> </article> <br>
 
     <article class="miembros"> Miembros
       <br>
       <?php
-      $products = getProducts();
+$products = getProducts();
+foreach ($products as $product) {
+    if ($product["equipo"] == $equipo) {
+?>
 
-      foreach($products as $product){
-        if($product["equipo"] == $equipo ){
-          ?>
-
-          <a class= "opcions" ><?php echo $product["gamertag"] ;  ?></a>
+          <a class= "opcions" ><?php echo $product["gamertag"]; ?></a>
           <br>
 
-          <?php }
-
-      }?>
+          <?php
+    }
+} ?>
     </article>
   </section>
-</br></br>
-
+    <br>
 <section class="hero">
-  <article class="Torneo">
-    Torneos inscritos:</article> </br>
-    <!-- aqui va un for each, pero no puedo llamar los dos phps de modelos_usuarios y modelo_torneos porque las dos usar saveproducts() porfa arreglen eso  -->
-    <article class="Torneo"><a href="./Brakets.php">Uleague - 2018 </a></article>  </br>
-    <article class="Torneo"><a href="./Brakets.php">QROleague - 2018 </a></article> </br>
+  <b class="Torneo" style="margin-top:7%"> Torneos inscritos</b>
+    <br>
+    <?php
+            $jsondata = file_get_contents("torneos.json");
+            $torneos = json_decode($jsondata, true);
+            $i = 0;
+            $j = 0;
+
+
+            foreach($torneos as $torneo){
+                foreach($torneo["equipos"] as $equipos){
+                    if($equipos == $equipo){?>
+                    <a href="./Torneoinfo.php?id=<?php echo $torneo["id"] ;  ?>" target="_self" class= "opcions" ><?php echo $torneo["nombre"] ;  ?></a>
+                    <br>
+            <?php   }
+                }
+            }
+    ?>
   </article>
-
-
-
+  <footer class="piepag" >
+    <p>Copyright &copy; DAW 2018 - Kitty Kats</p>
+  </footer>
 </body>
-
-
-
 </html>

@@ -1,15 +1,18 @@
 <?php
-  session_start();
-  require_once "./modelos_usuarios.php";
-  $adminData = $_SESSION["userSpecs"];
-  if(isset($_SESSION["userSpecs"])&& $adminData["Utype"] == "Admin"){
+session_start();
+require_once "./modelos_usuarios.php";
+require_once "./modelo_torneos.php";
+$adminData = $_SESSION["userSpecs"];
+if (isset($_SESSION["userSpecs"]) && $adminData["Utype"] == "Admin") {
     //dejar vacio...
-  }else{
-    header("Location: ./login.php");
-  }
 
-  $userData = $_SESSION["userSpecs"];
+}
+else {
+    header("Location: ./login.php");
+}
+$userData = $_SESSION["userSpecs"];
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,7 +31,7 @@
 
   <header class="hero">
     <div class="hero-wrap">
-      <p class="intro" id="intro">Perfil</p>
+      <b class="intro" id="intro">Perfil</b>
    </header>
 
    <nav>
@@ -38,20 +41,59 @@
         <!-- <li><a href="./.html" target="_self" class= "opcions" id="headline">Admin menu</a></li> -->
       </ul>
     </nav>
-</br></br>
 <section class="hero">
    <!-- Imagen de Perfil -->
 
-   <form action="./control_formulario.php?opcion=3" method="POST" class="form login">
-     <div class="form__field">
-       <input type="submit" name="logout" value="Cerrar Sesion">
-     </div>
-   </form>
-   <p> Bienvenido: <?php echo $adminData["gamertag"] ?> </p>
+    <form action="./control_formulario.php?opcion=3" method="POST" class="form login">
+            <div class="form__field">
+                <input type="submit" class="button" name="logout" value="Cerrar Sesion">
+            </div>
+    </form>
+
+   <b class="hero"> Bienvenido: <?php echo $adminData["gamertag"] ?> </b>
+   <br>
    <img src="./img/AdminIcon.png" alt="Prl" height="80" width="80" />
-   <article> Estadisticas de Administrador: ... En desarrollo
-   </article>
+
+   <br>
+   <a class="opcions"> Estadisticas de Administrador </a>
+   <br>
+   <a class="opcions"> Procentaje de Victorias: </a>
+        <?php
+
+        $jsondata = file_get_contents("torneos.json");
+        $torneos = json_decode($jsondata, true);
+         $i = 0;
+         $j = 0;
+
+         foreach($torneos as $torneo){
+            //echo $torneo;
+            //echo implode(' ', $torneo);
+
+            foreach($torneo["ganadores"] as $winner){
+                //echo $winner;
+                if($winner == $userData["equipo"]){
+                    $i = $i + 1;
+                }
+            }
+
+            foreach($torneo["perdedores"] as $losser){
+                //echo $losser;
+                if($losser == $userData["equipo"]){
+                    $j = $j + 1;
+                }
+            }
+            if($i == 0 && $j == 0){
+             $porcentaje = 0;
+            } else {
+            $porcentaje = $i / ($i + $j)*100;
+            }
+         }
+        ?>
+        <br>
+        <a class="opcions"> <?php echo $porcentaje; ?> %</a>
  </section>
-</br></br>
+ <footer class="piepag" >
+   <p>Copyright &copy; DAW 2018 - Kitty Kats</p>
+ </footer>
 </body>
 </html>

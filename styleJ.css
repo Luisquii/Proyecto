@@ -1,4 +1,4 @@
-header{
+header {
   font-weight: bold;
   margin: 0px;
   font-size: 30px;
@@ -6,41 +6,48 @@ header{
   color: #FFFFFF;
 }
 
-body{
+body {
   background-image: url('./img/Blue_background.jpg');
-  background-color: #000000; 
+  background-color: #000000;
   background-size: auto;
   background-repeat: no-repeat;
   margin: 0;
 }
 
-nav{
-  background-color: rgba(10,10,10,0);
+nav {
+  background-color: rgba(10, 10, 10, 0);
 }
 
-nav ul{
+nav ul {
   margin: 0;
   padding: 0;
   display: table;
   width: 100%;
 }
 
-nav li{
+nav li {
   display: table-cell;
 }
 
-nav li a{
+nav li a {
   /* color */
   text-decoration: none;
   font-size: 25px;
   display: block;
   text-align: center;
-  boder: 1px solid #e0e0d1;
+  border: 1px solid #e0e0d1;
   padding: 8px 100px;
 }
 
-.Torneo{
+.Torneo {
   text-align: center;
   font-size: 15px;
   color: #FFFFFF;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  text-align: center;
 }

@@ -6,9 +6,10 @@ body {
   margin: 0;
 }
 
-.piepag{
+.piepag {
   color: #FFFFFF;
 }
+
 .hero {
   position: relative;
   text-align: center;
@@ -51,41 +52,49 @@ body {
   margin-bottom: -40px;
   color: #e1e1e1;
 }
-.hero a.torneos{
+
+.hero a.torneos {
   font-family: 'Holtwood One SC', serif;
   text-transform: uppercase;
   color: #e1e1e1;
   font-size: 48px;
 }
-.hero article.intro{
+
+.hero article.intro {
   font-family: 'Holtwood One SC', serif;
   text-transform: uppercase;
   color: #e1e1e1;
   font-size: 24px;
 }
-.hero article.miembros{
+
+.hero article.miembros {
   font-family: 'Holtwood One SC', serif;
   text-transform: uppercase;
   color: #e1e1e1;
   font-size: 18px;
 }
-.hero td.miembros{
+
+.hero td.miembros {
   font-family: 'Holtwood One SC', serif;
   text-transform: uppercase;
   color: #e1e1e1;
   font-size: 12px;
 }
-.hero article.Torneo{
+
+.hero article.Torneo {
   font-family: 'Holtwood One SC', serif;
   text-transform: uppercase;
   color: #5CCA87;
   font-size: 18px;
 }
+
 .hero a.opcions {
   font-family: 'Holtwood One SC', serif;
   font-weight: normal;
   font-size: 30px;
   text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .hero p.year {
@@ -105,7 +114,13 @@ body {
   font-size: 30px;
   vertical-align: middle;
 }
-
+.hero b{
+  font-family: 'Holtwood One SC', serif;
+  color: #5CCA87;
+  letter-spacing: 6px;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  font-size: 3em;
+}
 .hero p {
   font-family: 'Abel', sans-serif;
   text-transform: uppercase;
@@ -184,8 +199,6 @@ body {
   width: 95%;
   width: 30.8333%\9;
 }
-
-.split-two {}
 
 .split-one .round {
   margin: 0 2.5% 0 0;
@@ -380,7 +393,6 @@ header {
 
 .player .score {
   display: inline;
-  float: right;
   border-left: 1px solid #AAA;
   padding-left: 10px;
   padding-right: 10px;
@@ -769,28 +781,30 @@ span.banner-header {
   font-size: 200%;
   margin-bottom: 10px;
 }
+
 ul {
   list-style: none;
 }
 
 .button {
-   border: 2px solid #20638a;
-   background: #4a9c24;
-   background: -webkit-gradient(linear, left top, left bottom, from(#65d6bc), to(#4a9c24));
-   background: -webkit-linear-gradient(top, #65D6BC, #4A9C24);
-   background: -moz-linear-gradient(top, #65d6bc, #4a9c24);
-   background: -ms-linear-gradient(top, #65d6bc, #4a9c24);
-   background: -o-linear-gradient(top, #65d6bc, #4a9c24);
-   padding: 15.5px 31px;
-   -webkit-border-radius: 18px;
-   -moz-border-radius: 18px;
-   border-radius: 18px;
-   color: #1A1FA3;
-   font-size: 15px;
-   text-decoration: none;
-   vertical-align: middle;
-   }
-#sad{
+  border: 2px solid #20638a;
+  background: #4a9c24;
+  background: -webkit-gradient(linear, left top, left bottom, from(#65d6bc), to(#4a9c24));
+  background: -webkit-linear-gradient(top, #65D6BC, #4A9C24);
+  background: -moz-linear-gradient(top, #65d6bc, #4a9c24);
+  background: -ms-linear-gradient(top, #65d6bc, #4a9c24);
+  background: -o-linear-gradient(top, #65d6bc, #4a9c24);
+  padding: 15.5px 31px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
+  color: #1A1FA3;
+  font-size: 15px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+#sad {
   height: 100px;
   width: 150px;
   margin-left: 46.5%;

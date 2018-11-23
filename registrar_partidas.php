@@ -11,6 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Istok+Web|Roboto+Condensed:700' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   </head>
+
   <style media="screen">
     form{
       color: #5CCA87;
@@ -24,21 +25,22 @@
   </style>
   <body>
     <?php
-        session_start();
-        $id=$_GET['id'];//$_GET['id'];Aquí también se debe de recibir el id del torneo por medio de la URL
-     ?>
+    session_start();
+    $id = $_GET['id']; //$_GET['id'];Aquí también se debe de recibir el id del torneo por medio de la URL
+
+    ?>
     <header class="hero">
         <div class="hero-wrap">
-          <p class="intro" id="intro">Brackcito</p>
-       </header>
-       <nav>
-          <ul class="hero">
-            <li><a href="./Index.html" target="_self" class= "opcions" id="headline">Home</a></li>
-            <li><a href="./login.html" target="_self" class= "opcions" id="headline">Iniciar Sesión</a></li>
-            <li><a href="./Perfil.html" target="_self" class= "opcions" id="headline">Perfil</a></li>
-          </ul>
-        </nav>
-      </br></br>
+          <b class="intro" id="intro">Brackcito</b>
+    </header>
+    <nav>
+        <ul class="hero">
+        <li><a href="./Index.html" target="_self" class= "opcions" id="headline">Home</a></li>
+        <li><a href="./login.html" target="_self" class= "opcions" id="headline">Iniciar Sesión</a></li>
+        <li><a href="./Perfil.html" target="_self" class= "opcions" id="headline">Perfil</a></li>
+        </ul>
+    </nav>
+
       <form class="" action="modelo_torneos.php?idTorneo=<?php echo $id; ?>&action=storeMatch" target="_self" method="post" >
         <select class="" name="round">
           <option value="r1">Round 1</option>

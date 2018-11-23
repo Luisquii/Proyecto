@@ -31,7 +31,7 @@
 
   <header class="hero">
     <div class="hero-wrap">
-      <p class="intro" id="intro">Equipos</p>
+      <b class="intro" id="intro">Equipos</b>
    </header>
 
    <nav>
@@ -45,7 +45,7 @@
 
  <section class="hero">
     <!-- Imagen de Perfil -->
-    <p class="intro" > Equipos Registrados </p>
+    <b class="intro" > Equipos Registrados </b>
     <br>
 
     <?php
@@ -67,19 +67,17 @@
         <a href="./Equipo.php?team=<?php echo $product["equipo"] ;  ?>" target="_self" class= "opcions" ><?php echo $product["equipo"] ;  ?></a>
         <br>
 
-        <?php }
+        <?php
+      }
       $flag = 0;
     }?>
 
 
   </section>
 <br>
-
-
-
+<footer class="piepag" >
+  <p>Copyright &copy; DAW 2018 - Kitty Kats</p>
+</footer>
 
 </body>
-
-
-
 </html>
